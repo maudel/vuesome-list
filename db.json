@@ -1,0 +1,15 @@
+{
+  "cars": [
+    { "price": 14444, "maker": "toyota", "color": "green" , "year" : 1989, "model": "corolla", "engine_type": "gasoline"},
+    { "price": 24444, "maker": "toyota", "color": "black" , "year" : 1989, "model": "prado", "engine_type": "gasoline"},
+    { "price": 34444, "maker": "toyota", "color": "yellow" , "year" : 1989, "model": "nexus", "engine_type": "gasoline"},
+    { "price": 44444, "maker": "toyota", "color": "red" , "year" : 1989, "model": "prius", "engine_type": "gasoline"},
+    { "price": 54444, "maker": "toyota", "color": "pink" , "year" : 1989, "model": "celica", "engine_type": "gasoline"},
+    { "price": 64444, "maker": "toyota", "color": "brown" , "year" : 1989, "model": "R4V4", "engine_type": "gasoline"},
+    { "price": 74444, "maker": "nissan", "color": "red" , "year" : 1989, "model": "sentra", "engine_type": "gasoline"},
+    { "price": 84444, "maker": "nissan", "color": "gray" , "year" : 1989, "model": "pathfinder", "engine_type": "gasoline"},
+    { "price": 94444, "maker": "susuki", "color": "green" , "year" : 1989, "model": "vitara", "engine_type": "gasoline"},
+    { "price": 15444, "maker": "susuki", "color": "green" , "year" : 1989, "model": "swift", "engine_type": "gasoline"},
+    { "price": 16444, "maker": "nissan", "color": "green" , "year" : 1989, "model": "xmotion", "engine_type": "gasoline"}
+  ]
+}
