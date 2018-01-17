@@ -1,10 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <!-- <HelloWorld/> -->
       <v-app id="inspire">
-        <v-container fluid grid-list-md>
+      <h1>Select at most three cars to compare</h1>
 
+        <v-container  grid-list-md>
+<v-card-title>
+        Search by Name
+        <v-spacer></v-spacer>
+        <v-text-field
+          append-icon="search"
+          label="Search"
+          single-line
+          hide-details
+          v-model="search"
+        ></v-text-field>
+      </v-card-title>
   <v-data-table
     v-bind:headers="headers"
     v-bind:items="items"
@@ -12,7 +22,7 @@
     v-model="selected"
     item-key="model"
     class="elevation-1"
-          select-all
+          select-all="false"
 
   >
     <template slot="headerCell" slot-scope="props">
@@ -42,11 +52,14 @@
     </template>
   </v-data-table>
         </v-container>
-<v-container fluid grid-list-md>
+<v-container  grid-list-md>
       <v-data-iterator
         content-tag="v-layout"
         row wrap
         :items="selected"
+        no-data-text="Seleccion para comparar"
+        v-show="selected.length"
+
       >
         <v-flex slot="item" slot-scope="props" xs12 sm6 md4 lg3>
           <v-card>
@@ -79,7 +92,6 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld'
 import carsService from './services/cars'
 export default {
   name: 'App',
@@ -110,11 +122,6 @@ export default {
         self.items = res.data;
       })
     },
-    change (v,s,d){
-      console.log(v);
-      return ;
-    }
-
   },
   computed: {
     verify (){
@@ -125,9 +132,6 @@ export default {
     },
 
   }
-  // components: {
-  //   HelloWorld
-  // }
 }
 </script>
 
@@ -137,7 +141,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+h1, h2 {
+  font-weight: normal;
+  margin: 30px
+}
+v-data-table{
+  margin: 100px
+}
+th .input-group--selection-controls {
+  display: none !important
 }
 </style>
